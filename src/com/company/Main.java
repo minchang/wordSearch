@@ -38,7 +38,7 @@ public class Main {
         List<String> contentsTotalList = new ArrayList<String>();
         for (int i = 0; i < contentsList.size(); i++) {
 
-            String [] contentsArray = contentsList.get(i).split("\\s+");
+            String[] contentsArray = contentsList.get(i).split("\\s+");
             for (int j = 0; j < contentsArray.length; j++) {
                 contentsTotalList.add(contentsArray[j]);
             }
@@ -77,89 +77,3 @@ public class Main {
     }
 
 }
-
-
-
-
-
-
-
-
-
-//        for (int i = 0; i < contentsList.size(); i++) {
-//            contents [i]
-//        }
-
-
-//        String[] titleString = contentsArray.split();
-//            String title = titleString[0];
-//            System.out.println(title);
-
-//            String[] contentsString = readLine.split("\\s?\\n");
-//            for (int i = 0; i < contentsString.length; i++) {
-//
-//                System.out.println(contentsString[i]);
-//            }
-//
-//            HashMap<String, Integer> wordsMap = new HashMap<String, Integer>();
-//
-//
-//            for (int i = 0; i < contentsString.length; i++) {
-//                int j = 0;
-//
-//                wordsMap.put(contentsString[i], ++j);
-//
-//            }
-//
-//            System.out.println(wordsMap.entrySet());
-
-//        String path = "/Users/David/IdeaProjects/dataSearch/src/files";
-//        File[] listOfFiles = file.listFiles();
-//        String[] fileName = null;
-//        for (int i = 0; i < listOfFiles.length; i++){
-//
-//            assert fileName != null;
-//            fileName[i] = listOfFiles[i].getName();
-//
-//        }
-//
-//        String filename
-
-
-//        if (file.isFile()) {
-//            System.out.println("file yes");
-//            System.out.println();
-//        }
-
-//            FileReader rw = new FileReader(file);
-//            BufferedReader br = new BufferedReader(rw);
-//            System.out.println(br.read());
-//
-//            List<String> allContentsList = new ArrayList<String>();
-//            allContentsList = br.readLine();
-//
-//            System.out.println(br);
-
-//            String[] titleString = readLine.split("\\n+");
-//            String title = titleString[0];
-//            System.out.println(title);
-
-//            String[] contentsString = readLine.split("\\s?\\n");
-//            for (int i = 0; i < contentsString.length; i++) {
-//
-//                System.out.println(contentsString[i]);
-//            }
-//
-//            HashMap<String, Integer> wordsMap = new HashMap<String, Integer>();
-//
-//
-//            for (int i = 0; i < contentsString.length; i++) {
-//                int j = 0;
-//
-//                wordsMap.put(contentsString[i], ++j);
-//
-//            }
-//
-//            System.out.println(wordsMap.entrySet());
-
-
