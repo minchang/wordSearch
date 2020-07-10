@@ -1,17 +1,15 @@
 package com.company;
 
-import java.io.*;
-import java.nio.charset.Charset;
+import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
-import java.util.stream.Stream;
 
 public class Main {
 
 
     public static void main(String[] args) throws IOException {
+
 
         // Creat id
         System.out.println();
@@ -23,19 +21,9 @@ public class Main {
         String idInput = sc.next();
         System.out.println("ID: " + idInput);
 
-        String path = "/Users/David/IdeaProjects/dataSearch/src/files";
-        File f = new File(path);
-        String[] pathName = f.list();
-        String[] id = new String[pathName.length];
-        for (int i = (pathName.length - 1); 0 <= i; i--) {
-
-            id[i] = pathName[i].substring(0, pathName[i].length() - 4);
-
-        }
+        String path = "/Users/David/IdeaProjects/wordSearch/src/files";
 
         // Create a file object
-//        File fileContents = new File(path + "/" + id +".txt");
-        String fileName = "/Users/David/IdeaProjects/dataSearch/src/files/1.txt";
         List<String> contentsList = new ArrayList<String>();
         contentsList = Files.readAllLines(Paths.get(path + "/" + idInput + ".txt"));
 
@@ -46,11 +34,17 @@ public class Main {
         System.out.println();
 
         // Creat contents Array
-        String[] contentsArray = contentsList.toString().split("\\s+");
+//        String[] contentsArray = contentsList.toString().split("\\s+");
+        List<String> contentsTotalList = new ArrayList<String>();
+        for (int i = 0; i < contentsList.size(); i++) {
 
-//        for (int i = 0; i < contentsArray.length; i++) {
-//            System.out.println(contentsArray[i]);
-//        }
+            String [] contentsArray = contentsList.get(i).split("\\s+");
+            for (int j = 0; j < contentsArray.length; j++) {
+                contentsTotalList.add(contentsArray[j]);
+            }
+
+        }
+        String[] contentsArray = contentsTotalList.toArray(new String[0]);
 
         // HashMap Words
         HashMap<String, Integer> wordsMap = new HashMap<String, Integer>();
@@ -71,13 +65,25 @@ public class Main {
             Map.Entry<String, Integer> entry = (Map.Entry) iterator.next();
             String key = (String) entry.getKey();
             int value = (Integer) entry.getValue();
-            System.out.println(key + ": " + value);
+//            System.out.println(key + ": " + value);
 
         }
+
+        // Creat Document
+        TotalDocument totalDocument = new TotalDocument(idInput, title, contentsArray);
+        System.out.println(totalDocument);
+
 
     }
 
 }
+
+
+
+
+
+
+
 
 
 //        for (int i = 0; i < contentsList.size(); i++) {
