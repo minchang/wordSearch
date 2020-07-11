@@ -1,12 +1,15 @@
 package com.company;
 
+import java.util.List;
+
 public class TotalDocument {
+
 
     private String docId;
     private String docTitle;
-    private String[] docContents;
+    private List docContents;
 
-    public TotalDocument(String docId, String docTitle, String[] docContents) {
+    public TotalDocument(String docId, String docTitle, List docContents) {
         this.docId = docId;
         this.docTitle = docTitle;
         this.docContents = docContents;
@@ -28,20 +31,20 @@ public class TotalDocument {
         this.docTitle = docTitle;
     }
 
-    public String[] getDocContents() {
+    public List getDocContents() {
         return docContents;
     }
 
-    public void setDocContents(String[] docContents) {
+    public void setDocContents(List docContents) {
         this.docContents = docContents;
     }
 
     @Override
     public String toString() {
         return "TotalDocument{" +
-                "docId='" + docId + '\'' +
-                ", docTitle='" + docTitle + '\'' +
-                ", docContents='" + docContents + '\'' +
+                "docId: '" + docId + '\'' +
+                ", docTitle: '" + docTitle + '\'' +
+                ", docContents: " + docContents +
                 '}';
     }
 }
