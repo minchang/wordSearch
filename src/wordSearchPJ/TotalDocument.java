@@ -1,4 +1,4 @@
-package com.company;
+package wordSearchPJ;
 
 import java.util.ArrayList;
 import java.util.HashMap;
