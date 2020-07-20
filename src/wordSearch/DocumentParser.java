@@ -13,7 +13,7 @@ public class DocumentParser {
     private File fileDir = new File("/Users/David/IdeaProjects/wordSearch/src/files");
     private String path = "/Users/David/IdeaProjects/wordSearch/src/files";
 
-
+    // Read and Get all files in the folder
     public List<String> getFilesinFolder(final File fileDir) {
 
         List<String> fileName = new ArrayList<String>();
@@ -29,6 +29,7 @@ public class DocumentParser {
         return fileName;
     }
 
+    // Get contents List (including title line in contents list)
     public List<String> getContentsList(String id) throws IOException {
 
         String pathTotal = path + "/" + id;
@@ -37,6 +38,7 @@ public class DocumentParser {
         return contentsList;
     }
 
+    // Read files in the folder and return document object
     public List<TotalDocument> parse() throws IOException {
 
         List<String> fileNameList = getFilesinFolder(fileDir);

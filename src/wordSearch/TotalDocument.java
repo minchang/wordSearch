@@ -63,12 +63,10 @@ public class TotalDocument {
 
         // HashMap Words
         for (int i = 0; i < contentsArray.length; i++) {
-
             if (wordsMap.containsKey(contentsArray[i])) {
-                wordsMap.put(contentsArray[i], wordsMap.get(contentsArray[i]) + 1);
+                wordsMap.put(contentsArray[i].toLowerCase(), wordsMap.get(contentsArray[i]) + 1);
             } else {
-
-                wordsMap.put(contentsArray[i], 1);
+                wordsMap.put(contentsArray[i].toLowerCase(), 1);
             }
         }
 

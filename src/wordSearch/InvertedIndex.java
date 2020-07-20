@@ -10,6 +10,7 @@ public class InvertedIndex {
     List<TotalDocument> resultDocumentList = new ArrayList<TotalDocument>();
     List<TotalDocument> value = new ArrayList<TotalDocument>();
 
+    // inverted index map
     public void indexDocument(TotalDocument doc) throws IOException {
 
         Map<String, Integer> DocWordCount = doc.getWordCounts();
@@ -32,6 +33,7 @@ public class InvertedIndex {
 
     }
 
+    // Keyword Search method
     public List<String> search(String keyword) {
 
         resultDocumentList = index.get(keyword);
@@ -39,17 +41,15 @@ public class InvertedIndex {
         if (resultDocumentList == null) {
             System.out.println("No search result!");
         } else {
-
-
             for (int i = 0; i < resultDocumentList.size(); i++) {
-
                 TotalDocument resultDocument = resultDocumentList.get(i);
-
                 resultIdList.add(resultDocument.getDocId());
             }
         }
         return resultIdList;
 
     }
+
+
 
 }
