@@ -22,6 +22,10 @@ Improved Codes before.
 
 6. Update Readme file in git
     1. Done.
+    
+7. .gitignore use
+
+9. intellij project name modified.
 
 
 
