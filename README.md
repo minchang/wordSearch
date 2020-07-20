@@ -25,9 +25,11 @@ Improved Codes before.
 
 
 
+
 Inverted Index Map.(Exercise 2)
 
 1. Read all files in the folder and Parse to make Document object for each file
 2. Mapping by indexDocument Method: 
     1. Key: keyword / Value: Document object list
 3. Search Keyword which you want to find in all files and Return files names in which the keyword you want to search.
+    1. whether it's upper case or not, we can search because it change upper --> lower case to search.
